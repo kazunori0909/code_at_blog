@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <testTag>
+    <comment>あ</comment>
+  </testTag>
+  <testTag>
+    <comment>い</comment>
+  </testTag>
+  <testTag>
+    <comment>う</comment>
+  </testTag>
+  <testTag>
+    <comment>え</comment>
+  </testTag>
+  <testTag>
+    <comment>お</comment>
+  </testTag>
+</root>

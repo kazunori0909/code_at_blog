@@ -1,0 +1,22 @@
+<job>
+<script language="JavaScript" src="preUsejQuery.js"></script>
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script language="JavaScript" src="postUsejQuery.js"></script>
+
+<script language="JavaScript">
+  var xml = new ActiveXObject("Microsoft.XMLDOM");
+  xml.async = false;
+  xml.load("sample.xml");
+
+  var $xml = $(xml);
+  alert( $xml.text() );
+
+</script>
+</job>

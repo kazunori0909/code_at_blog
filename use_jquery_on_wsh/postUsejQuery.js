@@ -1,0 +1,2 @@
+jQuery = window.jQuery;
+$	   = window.$;
