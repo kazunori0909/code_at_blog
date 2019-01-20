@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="prism.css" />
+</head>
+<body>
+  <h1>PowerShell</h1>
+  <h2>data-output指定版</h2>
+  data-output="2-5"
+  <div>
+  <pre class="command-line" data-prompt="PS D:\code_at_blog\prism>" data-output="2-5">
+<code class="language-powershell">Get-Location
+
+Path
+----
+D:\code_at_blog\prism</code></pre>
+  </div>
+
+  <h2>data-filter指定版</h2>
+  data-filter-output="(out)"<br/>
+  <div>
+  <pre class="command-line" data-prompt="PS D:\code_at_blog\prism>" data-filter-output="(out)">
+<code class="language-powershell">Get-Location
+(out)
+(out)Path
+(out)----
+(out)D:\code_at_blog\prism</code></pre>
+  </div>
+
+  <script src="prism.js"></script>
+
+  <!-- ------------ For code verification ------------ -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $("pre.command-line").each(function(){
+      var $this=$(this);
+      var text = $this.parent().html().replace(/^\s+|\s+$/g,'').split("<").join("&lt;").split(">").join("&gt;");
+      $this.after( '<pre><code class="language-html">' + text + '</code></pre>' );
+    })
+  </script>
+  <!-- ------------ For code verification ------------ -->
+
+  
+</body>
+</html>
