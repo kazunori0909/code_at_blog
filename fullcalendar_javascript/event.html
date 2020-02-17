@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='fullcalendar/core/main.css' rel='stylesheet' />
+<link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+
+<script src='fullcalendar/core/main.js'></script>
+<script src='fullcalendar/daygrid/main.js'></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'dayGrid' ]
+      ,defaultDate: '2020-02-10',
+      events: [
+        {
+          title: '来客',
+          start: '2020-02-10'
+        },
+        {
+          title: '旅行',
+          start: '2020-02-28T06:00:00',
+          end: '2020-03-01T22:00:00'
+        }
+      ]
+    });
+    calendar.render();
+  });
+</script>
+<style>
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+  <div id='calendar'></div>
+</body>
+</html>
