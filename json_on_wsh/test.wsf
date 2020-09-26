@@ -1,0 +1,35 @@
+<job>
+
+<script language="JavaScript" src="json3.js"></script>
+<script language="JScript">
+
+var sample = {
+  "name" : "tarou",
+  "item" : [
+    "sword",
+    "shield"
+  ]
+};
+
+var jsonString = JSON.stringify(sample, undefined, "    ");
+WScript.Echo("json3.js使用時");
+WScript.Echo("----------------------------------------");
+WScript.Echo(jsonString);
+WScript.Echo("----------------------------------------");
+WScript.Echo("");
+
+var MY_JSON = (function(){
+    var htmlfile = new ActiveXObject('htmlfile');
+    htmlfile.write('<meta http-equiv="x-ua-compatible" content="IE=11" />');
+    return htmlfile.parentWindow.JSON;
+})();
+
+var jsonString = MY_JSON.stringify(sample, undefined, "    ");
+WScript.Echo("HTMLのJSON使用時");
+WScript.Echo("----------------------------------------");
+WScript.Echo(jsonString);
+WScript.Echo("----------------------------------------");
+
+
+</script>
+</job>
